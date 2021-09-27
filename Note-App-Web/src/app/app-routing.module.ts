@@ -4,8 +4,8 @@ import { NotesAllComponent } from './notes-all/notes-all.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'AllNotes', component: NotesAllComponent },
-  { redirectTo:'AllNotes'}
+  { path: '/AllNotes', component: NotesAllComponent },
+  { path: '', redirectTo: '/AllNotes', pathMatch: 'full' },
   
 ];
 
