@@ -10,7 +10,6 @@ export class NotesAllComponent implements OnInit {
 
   constructor() { }
   ngOnInit(): void {
-  
   }
    SelectedNotes:INotes | any;
   @Input()
