@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { INotes } from '../Notes.model';
 
 @Component({
   selector: 'app-notes-all',
@@ -8,8 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class NotesAllComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit(): void {
+  
   }
+   SelectedNotes:INotes | any;
+  @Input()
+  set Notes(Notes: INotes) {
+      if (Notes != null) {
+          this.SelectedNotes = Notes;
+      } 
+  }
+
+
+
 
 }

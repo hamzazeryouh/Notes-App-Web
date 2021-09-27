@@ -1,6 +1,6 @@
 
 
-export interface Notes{
+export interface INotes{
     id:number;
     titels:String;
     TextBody:String;
