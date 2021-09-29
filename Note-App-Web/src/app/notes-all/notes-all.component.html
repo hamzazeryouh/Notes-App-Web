@@ -1,11 +1,11 @@
 
 <ul class="grid bg-gray-800 grid-cols-4 w-full">
-    <li class="w-auto p-2 rounded-2xl bg-red-300 m-2 h-auto">
+    <li *ngFor="let note in Notes" class="w-auto p-2 rounded-2xl bg-red-300 m-2 h-auto">
       <div class="m-2 rounded-2xl p-2 w-auto h-auto">
         <div class="flex">
-          <p class="font-semibold text-xl text-gray-900">Call with Nenad Nikolic from Toptal</p>
+          <p class="font-semibold text-xl text-gray-900">{{note.title}}</p>
           <div>
-            <svg class="p-2 scale-75 hover:scale-90 cursor-pointer bg-gray-900 rounded-full focus:" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style=" fill:#000000;">
+            <svg onclick="likNote(note.id)" class="p-2 scale-75 hover:scale-90 cursor-pointer bg-gray-900 rounded-full focus:" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style=" fill:#000000;">
               <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
                 <path d="M0,172v-172h172v172z" fill="none"></path>
                 <g fill="#ffffff"><path d="M35.088,167.184c-0.688,0 -1.376,-0.344 -2.064,-0.688c-1.032,-0.688 -1.72,-2.408 -1.376,-3.784l15.136,-56.416l-45.408,-36.808c-1.376,-0.688 -1.72,-2.408 -1.376,-3.784c0.344,-1.376 1.72,-2.408 3.096,-2.408l58.48,-3.096l20.984,-54.696c0.688,-1.032 2.064,-2.064 3.44,-2.064c1.376,0 2.752,1.032 3.096,2.064l20.984,54.696l58.48,3.096c1.376,0 2.752,1.032 3.096,2.408c0.344,1.376 0,2.752 -1.032,3.784l-45.408,36.808l15.136,56.416c0.344,1.376 0,2.752 -1.376,3.784c-1.032,0.688 -2.752,1.032 -3.784,0l-49.192,-31.648l-49.192,31.648c-0.688,0.688 -1.032,0.688 -1.72,0.688z"></path></g>
@@ -16,7 +16,9 @@
   
         <div class="h-auto">
           <hr class="border border-gray-700" />
-          <p class="font-semibold text-gray-700">Assurer la réception, le contrôle et l’expédition des produits Détection & Rejets les produits non conformes ou suspects. Gestion des retours fournisseurs. Réalisation des inventaires de stock</p>
+          <p class="font-semibold text-gray-700">
+            {{note.textbody}}
+          </p>
         </div>
   
         <div class="flex justify-end items-end w-auto p-2">

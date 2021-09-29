@@ -11,6 +11,7 @@ export class NotesAllComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
   }
+
    SelectedNotes:INotes | any;
   @Input()
   set Notes(Notes: INotes) {
@@ -19,7 +20,9 @@ export class NotesAllComponent implements OnInit {
       } 
   }
 
-
+likNote(id:any){
+    localStorage.getItem(id)
+}
 
 
 }
